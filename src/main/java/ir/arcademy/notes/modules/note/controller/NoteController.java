@@ -35,7 +35,8 @@ public class NoteController {
 
     @GetMapping
     public ResponseEntity<NoteResponse> getAll(HttpServletRequest request, HttpServletResponse response, @Nullable @RequestParam String title) {
-
+        System.out.println(request.getHeader("apple"));
+        response.setHeader("white", "sefiddddd");
         NoteResponse noteResponse;
 
         if (title == null) {
