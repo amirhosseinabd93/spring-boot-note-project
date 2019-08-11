@@ -33,7 +33,7 @@ public class Note {
     @Column(name = "datetime")
     private LocalDateTime dateTime ;
 
-    @ManyToMany(cascade = {CascadeType.MERGE})
+    @ManyToMany
     @JoinTable(name = "notes_categories", joinColumns = @JoinColumn(name = "note_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "category_id", referencedColumnName ="id"))
     private List<Category> categories;
 
